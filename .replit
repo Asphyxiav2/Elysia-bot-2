@@ -1,0 +1,4 @@
+language = "nodejs"
+run = "npm start"
+modules = ["python-3.10:v25-20230920-d4ad2e4"]
+#modules = ["nodejs-20:v8-20230920-bd784b9"]
