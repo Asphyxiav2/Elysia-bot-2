@@ -1,39 +1,30 @@
 module.exports.config = {
-    name: "sim",
+    name: "Cai",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "KENLIEPLAYS",
-    description: "Talk to sim",
-    commandCategory: "sim",
-    usages: "[ask]",
+    credits: "Nath",
+    description: "Talk to characters",
+    commandCategory: "cai",
+    usages: "[(prefix) prompt]",
     cooldowns: 2,
 };
 
 module.exports.run = async function({ api, event, args }) {
-    const axios = require("axios");
-    let { messageID, threadID, senderID, body } = event;
-    let tid = threadID,
-    mid = messageID;
-    const content = encodeURIComponent(args.join(" "));
-    if (!args[0]) return api.sendMessage("Please type a message...", tid, mid);
-    try {
-        const res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=ph&message=${content}&filter=false`);
-        const respond = res.data.success;
-        if (res.data.error) {
-            api.sendMessage(`Error: ${res.data.error}`, tid, (error, info) => {
-                if (error) {
-                    console.error(error);
-                }
-            }, mid);
-        } else {
-            api.sendMessage(respond, tid, (error, info) => {
-                if (error) {
-                    console.error(error);
-                }
-            }, mid);
-        }
-    } catch (error) {
-        console.error(error);
-        api.sendMessage("An error occurred while fetching the data.", tid, mid);
-    }
-};
+ const CharacterAI = require("node_characterai");
+const characterAI = new CharacterAI();
+
+(async () => {
+  // Authenticating as a guest (use `.authenticateWithToken()` to use an account)
+  await characterAI.authenticateWithToken("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVqYmxXUlVCWERJX0dDOTJCa2N1YyJ9.eyJpc3MiOiJodHRwczovL2NoYXJhY3Rlci1haS51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDU4Njc0Mzk3MDQzNzM5NTg2NjMiLCJ");
+
+  // Place your character's id here
+  const characterId = "iO8Mv8j8RyuUXsdJIhp2UL1ctUsWdKvBpZlRlt3EoRM";";
+
+  const chat = await characterAI.createOrContinueChat(characterId);
+
+  // Send a message
+  const response = await chat.sendAndAwaitResponse("User Prompt", true);
+
+  console.log(response);
+  // Use `response.text` to use it as a string
+})();

@@ -3,7 +3,7 @@ module.exports.config = {
   version: "1.0.1",
   hasPermssion: 0,
   credits: "chinhle & Re-Made by SaikiDesu",
-  description: "Tạo ra một avt trên taoanhdep.",
+  description: "Create an avatar on taoanhdep.",
   commandCategory: "tạo ảnh",
   cooldowns: 0,
   dependencies: {

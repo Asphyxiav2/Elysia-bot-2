@@ -2,7 +2,7 @@ const fs = require('fs');
 const request = require('request');
 
 module.exports.config = {
-    name: "sendnoti",
+    name: "sendnoti1",
     version: "1.0.0",
     hasPermssion: 2,
     credits: "ha",

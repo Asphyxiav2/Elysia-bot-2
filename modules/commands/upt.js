@@ -112,11 +112,11 @@ let a = await loadImage(pathAva)
     ctx.textAlign = "center";
     ctx.font = "750px Grandstander";
     ctx.fillStyle = "#FFF"
-    ctx.fillText("𝙡𝙚𝙜𝙚𝙣𝙙 𝙗𝙤𝙩", canvas.width / 2 - 660, 1600);
+    ctx.fillText("Nerissa 𝙗𝙤𝙩", canvas.width / 2 - 660, 1600);
     ctx.save();
     ctx.font = "350px Grandstander";
     ctx.fillStyle = "#000"
-    ctx.fillText("Ralph Angelo Garcia", canvas.width / 2 - 660, 1000);
+    ctx.fillText("Nath Aniel Lobo", canvas.width / 2 - 660, 1000);
     ctx.fillText(`${z_1}:${x_1}:${y_1}`, canvas.width / 2 - 630, 2000);
     ctx.restore();
     ctx.save();
@@ -125,9 +125,9 @@ let a = await loadImage(pathAva)
     ctx.fillStyle = "#000"
     ctx.fillText("Jeka", 1200, 2750);
     ctx.fillStyle = "#FFF"
-    ctx.fillText("Jeka", 1600, 3150);
+    ctx.fillText("Nath", 1600, 3150);
     ctx.fillStyle = "#000"
-   ctx.fillText("Jeka", 2000, 3600);
+   ctx.fillText("Nath", 2000, 3600);
     ctx.beginPath();
     const imageBuffer = canvas.toBuffer();
     fs.writeFileSync(pathImg, imageBuffer);

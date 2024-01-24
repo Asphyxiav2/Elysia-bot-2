@@ -17,7 +17,7 @@ module.exports.handleEvent = async function ({ api, args, event, client, __GLOBA
     if (nameBot !== `[ ${config.PREFIX} ] • ${config.BOTNAME}`) {
         api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by CatalizCS and SpermLord" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
         setTimeout(() => {
-            return api.sendMessage(`THIS IS AUTOMATIC CHANGE BOT NICKNAME PLEASE DO NOT CHANGE MY NICKNAME\nMy Prefix ${global.config.PREFIX}\nMy Developer facebook.com/6ixAxie`, threadID);
+            return api.sendMessage(`THIS IS AUTOMATIC CHANGE BOT NICKNAME PLEASE DO NOT CHANGE MY NICKNAME\nMy Prefix ${global.config.PREFIX}\nMy Developer https://m.facebook.com/profile.php/?id=100041516716632`, threadID);
         }, 1500);
     }
 }

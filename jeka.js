@@ -137,8 +137,8 @@ global.getText = function (...args) {
 console.log(global.getText('mirai', 'foundPathAppstate'))
 try {
     var appStateFile = resolve(join(global.client.mainPath, global.config.APPSTATEPATH || "appstate.json"));
-    var appState = JSON.parse(process.env["FBSTATE"]) || require(appStateFile);
-    logger.loader(global.getText("mirai", "foundPathAppstate"))
+    var appState = process.env["FBSTATE"] ? JSON.parse(process.env["FBSTATE"]) : require(appStateFile);
+    logger.loader(global.getText("mirai", "foundPathAppstate"));
 }
  
 catch { return logger.loader(global.getText("mirai", "notFoundPathAppstate"), "error") }

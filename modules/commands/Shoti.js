@@ -15,7 +15,7 @@ module.exports.run = async ({ api, event, Currencies}) => {
   const fs = require("fs");
   var money = (await Currencies.getData(event.senderID)).money
   if (money >= 1000000) {
-  axios.get('https://apivideo.saikidesu-support.repl.co/tiktok?apikey=opa').then(res => {
+  axios.get('https://your-shoti-api.vercel.app/api/v1/get').then(res => {
   var image = res.data.url;
         let count = res.data.count;
   let callback = function () {

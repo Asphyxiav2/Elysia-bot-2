@@ -32,7 +32,8 @@ module.exports.config = {
             modelNum = modelNum - 1;
         }
 
-        const apiUrl = `https://sampleapi.mra1k3r0.repl.co/get/aiimage/generate?prompt=${encodeURIComponent(prompt)}&model=${modelNum}`;
+        const apiUrl = `https://n5vh7c-3009.csb.app/get/aiimage/generate?
+prompt=${encodeURIComponent(prompt)}&model=${modelNum}`;`;
         try {
             const response = await axios.get(apiUrl);
             console.log(response);
@@ -46,7 +47,7 @@ module.exports.config = {
     }
 
 async function getModels() {
-    return (await axios.get('https://sampleapi.mra1k3r0.repl.co/get/aiimage/models')).data.models;
+    return (await axios.get('https://n5vh7c-3009.csb.app/get/aiimage/models')).data.models;
 }
 
 async function listAvailableModels(api, event, models) {

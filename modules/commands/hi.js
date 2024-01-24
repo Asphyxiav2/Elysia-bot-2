@@ -1,8 +1,8 @@
 module.exports.config = {
-  name: "hi",
+  name: "Wah!",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Sam",
+  credits: "Nath",
   description: "hi gửi sticker",
   commandCategory: "QTV BOX",
   usages: "[text]",
@@ -11,22 +11,13 @@ module.exports.config = {
 
 module.exports.handleEvent = async ({ event, api, Users }) => {
   let KEY = [ 
-    "hello",
-    "hi po",
-    "hai",
-    "chào",
-    "chao",
-    "Hi",
+    "HI!",
+    "hI",
     "hi",
-    "h",
-    "hìì",
-    "lô",
-    "hii",
-    "helo po",
-    "hê nhô"
+    "Hi"
   ];
   let thread = global.data.threadData.get(event.threadID) || {};
-  if (typeof thread["hi"] == "undefined", thread["hi"] == false) return
+  if (typeof thread["Hi"] == "undefined", thread["hi"] == false) return
   else {
   if (KEY.includes(event.body.toLowerCase()) !== false) {
     let data = [
@@ -53,7 +44,7 @@ module.exports.handleEvent = async ({ event, api, Users }) => {
     hours > 701 && hours <= 1000 ? "shining" :
     hours > 1001 && hours <= 1200 ? "lunch" : 
     hours > 1201 && hours <= 1700 ? "afternoon" : 
-    hours > 1701 && hours <= 1800 ? "gloaming" : 
+    hours > 1701 && hours <= 1800 ? "afternoon" : 
     hours > 1801 && hours <= 2100 ? "evening" : 
     hours > 2101 && hours <= 2400 ? "late night" : 
     "error");
@@ -63,7 +54,7 @@ module.exports.handleEvent = async ({ event, api, Users }) => {
       tag: name,
       id: event.senderID
     })
-    let msg = {body: `Hi ${name}, have a good ${session}`, mentions}
+    let msg = {body: `Hi darling! it's your one and only devilish diva, Nerissa ravencroft..  ${name}, have a good ${session}`, mentions}
     api.sendMessage(msg, event.threadID, (e, info) => {
       setTimeout(() => {
         api.sendMessage({sticker: sticker}, event.threadID);
@@ -77,23 +68,23 @@ module.exports.languages = {
   "vi": {
     "on": "Bật",
     "off": "Tắt",
-		"successText": `${this.config.name} thành công`,
-	},
-	"en": {
-		"on": "on",
-		"off": "off",
-		"successText": "success!",
-	}
+    "successText": `${this.config.name} thành công`,
+  },
+  "en": {
+    "on": "on",
+    "off": "off",
+    "successText": "success!",
+  }
 }
 
 module.exports.run = async ({ event, api, Threads, getText }) => {
   let { threadID, messageID } = event;
   let data = (await Threads.getData(threadID)).data;
-	if (typeof data["hi"] == "undefined" || data["hi"] == true) data["hi"] = false;
-	else data["hi"] = true;
-	await Threads.setData(threadID, {
-		data
-	});
-	global.data.threadData.set(threadID, data);
-	return api.sendMessage(`${(data["hi"] == false) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
+  if (typeof data["hi"] == "undefined" || data["hi"] == true) data["hi"] = false;
+  else data["hi"] = true;
+  await Threads.setData(threadID, {
+    data
+  });
+  global.data.threadData.set(threadID, data);
+  return api.sendMessage(`${(data["hi"] == false) ? getText("off") : getText("on")} ${getText("successText")}`, threadID, messageID);
 }

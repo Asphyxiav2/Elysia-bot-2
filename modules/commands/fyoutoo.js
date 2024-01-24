@@ -12,7 +12,7 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
-      if (event.body.indexOf("KyS")==0 || event.body.indexOf("kys")==0 || event.body.indexOf("kill yourese")==0 || event.body.indexOf("Kys")==0 || event.body.indexOf("pakyu")==0 || event.body.indexOf("Pakyu")==0 || event.body.indexOf("pak you")==0 || event.body.indexOf("Pak you")==0 || event.body.indexOf("pak u")==0 || event.body.indexOf("Pak u")==0 || event.body.indexOf("pak yu")==0 || event.body.indexOf("Pak yu")==0) {
+      if (event.body.indexOf("KyS")==0 || event.body.indexOf("kys")==0 || event.body.indexOf("kill yourese")==0 || event.body.indexOf("Kys")==0 || event.body.indexOf("Kill yourself")==0 || event.body.indexOf("Pakyu")==0 || event.body.indexOf("pak you")==0 || event.body.indexOf("Pak you")==0 || event.body.indexOf("pak u")==0 || event.body.indexOf("Pak u")==0 || event.body.indexOf("pak yu")==0 || event.body.indexOf("Pak yu")==0) {
         var msg = {
         body: "No You",
         attachment: fs.createReadStream(__dirname + `/noprefix/KYS.mp4`)

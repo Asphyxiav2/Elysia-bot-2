@@ -3,7 +3,7 @@ module.exports.config = {
     version: "1.0.0",
     hasPermssion: 0,
     credits: "MeewMeew",
-    description: "Xem kết quả xổ số 40 tỉnh thành",
+    description: "See lottery results for 40 provinces",
     commandCategory: "General",
     usages: "[args]",
     cooldowns: 5,

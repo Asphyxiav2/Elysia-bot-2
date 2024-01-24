@@ -3,7 +3,7 @@ const chalk = require('chalk');
 
 async function pingMe() {
     if (typeof process.env.REPL_SLUG !== 'undefined') {
-        let baseUrl = `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`;
+        let baseUrl = `https://fc785a43-39de-4c1c-9fd9-7c8f44593ce1-00-3414oy8adgivs.kirk.replit.dev`;
 
         try {
             const response = await axios.request({

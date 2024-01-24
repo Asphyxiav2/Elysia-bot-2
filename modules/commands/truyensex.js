@@ -64,7 +64,7 @@ module.exports.run = async function ({ api, event, Users, args }) {
             }, messageID);
         }
         default: {
-            return api.sendMessage('✅TAG:\n- LIST: xem list truyện hiện có và lựa chọn để đọc.\n- CONTRIBUTE: đóng góp link truyện để có thể đọc trên messenger\n🥏 AUTHOR: D-Jukie', threadID, messageID);
+            return api.sendMessage('✅TAG\n- LIST: See the list of existing stories and choose to read.\n- CONTRIBUTE: contribute story links so you can read them on messenger\n🥏 AUTHOR: D-Jukie', threadID, messageID);
         }
     }
 }

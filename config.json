@@ -8,7 +8,9 @@
     "adminOnly": false,
     "keyAdminOnly": "100041516716632",
     "commandDisabled": [
-        ""
+        "",
+        "ano.js",
+        "traicay.js"
     ],
     "eventDisabled": [
         ""
@@ -35,15 +37,16 @@
     ],
     "PASSWORD": "",
     "autoaccept": "false",
-    "BOTNAME": "Nanashi Mumei🦉",
+    "BOTNAME": "Nerissa Ravencroft🐦‍⬛",
     "PREFIX": "!",
     "ADMINBOT": [
-        "100069255516638",
         "100041516716632",
         "100009534883026",
         "100093099606387",
         "100069255516638",
-        "100093099606387"
+        "100093099606387",
+        "100044338453848",
+        "100077437345044"
     ],
     "GOD": [
         "100041516716632"

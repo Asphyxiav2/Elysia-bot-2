@@ -30,7 +30,7 @@ module.exports.run = async function ({ api, event, args }) {
 
     path += 'fbVID.mp4';
 
-    const aa = await axios.get(`https://facebookdl.hayih59124.repl.co/facebook?url=${encodeURI(link)}`);
+    const aa = await axios.get(`auto-download-all-in-one.p.rapidapi.com`);
 
 
     const videoUrl = aa.data.result.sd_q; 

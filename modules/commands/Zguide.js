@@ -3,7 +3,7 @@ module.exports.config = {
 	version: "1.0.5",
 	hasPermssion: 0,
 	credits: "toan",
-	description: "sailenh",
+	description: "Utilities",
 	commandCategory: "Tiện ích",
 	usages: "Tiện ích",
 	cooldowns: 0

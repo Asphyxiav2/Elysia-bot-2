@@ -25,7 +25,7 @@ module.exports.run = async function ({ api, event, args }) {
   try {
     let path = __dirname + `/cache/`;
 
-    let res = await axios.get(`https://tiktokdl.hayih59124.repl.co/TikTokdl?url=${encodeURIComponent(link)}`);
+    let res = await axios.get(`https://clumsy-subsequent-monkey.glitch.me/tikdl?url=URL_HERE&type=mp4-basic&api=tikme`);
     await fs.ensureDir(path);
 
     path += 'tiktok_video.mp4';

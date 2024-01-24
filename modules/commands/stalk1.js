@@ -1,6 +1,5 @@
-var cred = "Deku";
 module.exports.config = {
-    name: "stalk",
+    name: "stalk1",
     version: "1.0.0",
     hasPermision: 0,
     credits: `${cred}`,
